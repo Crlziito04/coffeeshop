@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% load tailwind_filters %} {% block content%}
+
+<h1 class="p-6 text-center text-2xl font-bold">Iniciar Sesion</h1>
+<form action="" class="w-64 border rounded p-3 mx-auto my-2" method="post">
+  {% csrf_token %} {{form|crispy}}
+  <button
+    type="submit"
+    class="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+  >
+    Login
+  </button>
+</form>
+{% endblock content%}
